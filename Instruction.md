@@ -112,3 +112,5 @@
 - Aide à la mise en place du dépôt GitHub pour le projet existant : rappel des commandes `git init`, `git add .`, `git commit`, `git branch -M main`, `git remote add origin git@github.com:issa9595/template1.git` puis `git push -u origin main` pour initialiser le dépôt local et pousser le code sur GitHub.
 
 - Résolution d’un blocage GitHub Push Protection lié à la présence d’un token Google OAuth dans `.env` : conseils pour ajouter `.env` au `.gitignore`, retirer le secret du fichier, regénérer le token côté Google et recréer un dépôt Git propre (réinitialisation de `.git`) avant de pousser à nouveau sans secrets.
+
+- Explication sur l’ajout d’un tab icon (favicon) dans la page `index.html` via une balise `<link rel="icon" ...>` pointant vers une image placée dans le dossier `public` ou à la racine, et correction du chemin pour Vite en utilisant `href="/favicon.ico"` (et non `"/public/favicon.ico"`).
