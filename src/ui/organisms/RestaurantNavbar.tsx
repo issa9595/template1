@@ -13,11 +13,6 @@ export function RestaurantNavbar({ brandName }: RestaurantNavbarProps) {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleNavigate = (path: string) => {
-    navigate(path);
-    setIsOpen(false);
-  };
-
   return (
     <header className="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md dark:bg-background-dark/80">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">

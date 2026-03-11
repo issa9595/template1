@@ -119,4 +119,4 @@
 
 - Transformation de `RestaurantNavbar` en topbar responsive avec burger menu sur mobile : ajout d’un état `isOpen`, d’un bouton icône (menu/close) visible en `md:hidden`, et d’un panneau de navigation mobile contenant les liens `Menu`, `Gallery`, `Contact` et le bouton `Reserve`, tout en gardant la navigation horizontale actuelle sur desktop.
 
-- Ajustement du bouton « Reserve » pour qu’il ne s’affiche dans la topbar que sur desktop (`md:inline-flex`) et reste uniquement dans le burger menu sur mobile, afin d’éviter le doublon sur les petits écrans.
+- Ajustement du bouton « Reserve » pour qu’il ne s’affiche dans la topbar que sur desktop (`md:inline-flex`) et reste uniquement dans le burger menu sur mobile, afin d’éviter le doublon sur les petits écrans, et simplification de `RestaurantNavbar` en supprimant une fonction `handleNavigate` devenue inutile pour corriger l’erreur TS6133.
