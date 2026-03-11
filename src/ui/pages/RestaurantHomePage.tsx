@@ -1,3 +1,4 @@
+import { PageMeta } from "../PageMeta";
 import { getRestaurantHomeViewModel } from "../../controllers/restaurantHomeController";
 import { getReservationsViewModel } from "../../controllers/restaurantReservationsController";
 import { RestaurantNavbar } from "../organisms/RestaurantNavbar";
@@ -15,6 +16,10 @@ export function RestaurantHomePage() {
     <div className="relative flex min-h-screen flex-col overflow-x-hidden bg-background-light text-slate-900 dark:bg-background-dark dark:text-slate-100">
       <RestaurantNavbar brandName={viewModel.brandName} />
       <main className="flex-1">
+        <PageMeta
+          title="L'Essence – Restaurant gastronomique à Paris"
+          description="Découvrez L'Essence, restaurant gastronomique à Paris : cuisine d'auteur, cave d'exception et expérience fine dining complète."
+        />
         <RestaurantHero hero={viewModel.hero} />
         <StorySection
           story={viewModel.story}

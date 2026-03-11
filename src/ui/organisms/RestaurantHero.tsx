@@ -1,4 +1,5 @@
 import type { HeroModel } from "../../domain/restaurantHome";
+import { useNavigate } from "react-router-dom";
 import { PrimaryButton } from "../atoms/PrimaryButton";
 
 interface RestaurantHeroProps {
@@ -6,6 +7,8 @@ interface RestaurantHeroProps {
 }
 
 export function RestaurantHero({ hero }: RestaurantHeroProps) {
+  const navigate = useNavigate();
+
   return (
     <section className="relative flex h-screen min-h-[700px] w-full items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
@@ -24,12 +27,16 @@ export function RestaurantHero({ hero }: RestaurantHeroProps) {
           {hero.subtitle}
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <PrimaryButton className="w-full min-w-[180px] sm:w-auto">
+          <PrimaryButton
+            className="w-full min-w-[180px] sm:w-auto"
+            onClick={() => navigate("/menu")}
+          >
             {hero.primaryCtaLabel}
           </PrimaryButton>
           <PrimaryButton
             variant="secondary"
             className="w-full min-w-[180px] sm:w-auto"
+            onClick={() => navigate("/reservations")}
           >
             {hero.secondaryCtaLabel}
           </PrimaryButton>

@@ -30,6 +30,18 @@ export function RestaurantNavbar({ brandName }: RestaurantNavbarProps) {
 
         <nav className="hidden items-center gap-10 md:flex">
           <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `${baseNavLinkClasses} ${
+                isActive
+                  ? "text-primary"
+                  : "text-slate-900 hover:text-primary dark:text-slate-100"
+              }`
+            }
+          >
+            Accueil
+          </NavLink>
+          <NavLink
             to="/menu"
             className={({ isActive }) =>
               `${baseNavLinkClasses} ${
@@ -40,6 +52,18 @@ export function RestaurantNavbar({ brandName }: RestaurantNavbarProps) {
             }
           >
             Menu
+          </NavLink>
+          <NavLink
+            to="/story"
+            className={({ isActive }) =>
+              `${baseNavLinkClasses} ${
+                isActive
+                  ? "text-primary"
+                  : "text-slate-900 hover:text-primary dark:text-slate-100"
+              }`
+            }
+          >
+            Story
           </NavLink>
           <NavLink
             to="/gallery"
@@ -93,6 +117,19 @@ export function RestaurantNavbar({ brandName }: RestaurantNavbarProps) {
         <div className="border-b border-primary/10 bg-background-light/95 backdrop-blur-md dark:bg-background-dark/95 md:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-4">
             <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `${baseNavLinkClasses} ${
+                  isActive
+                    ? "text-primary"
+                    : "text-slate-900 hover:text-primary dark:text-slate-100"
+                }`
+              }
+              onClick={() => setIsOpen(false)}
+            >
+              Accueil
+            </NavLink>
+            <NavLink
               to="/menu"
               className={({ isActive }) =>
                 `${baseNavLinkClasses} ${
@@ -104,6 +141,19 @@ export function RestaurantNavbar({ brandName }: RestaurantNavbarProps) {
               onClick={() => setIsOpen(false)}
             >
               Menu
+            </NavLink>
+            <NavLink
+              to="/story"
+              className={({ isActive }) =>
+                `${baseNavLinkClasses} ${
+                  isActive
+                    ? "text-primary"
+                    : "text-slate-900 hover:text-primary dark:text-slate-100"
+                }`
+              }
+              onClick={() => setIsOpen(false)}
+            >
+              Story
             </NavLink>
             <NavLink
               to="/gallery"

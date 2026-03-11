@@ -120,3 +120,25 @@
 - Transformation de `RestaurantNavbar` en topbar responsive avec burger menu sur mobile : ajout d’un état `isOpen`, d’un bouton icône (menu/close) visible en `md:hidden`, et d’un panneau de navigation mobile contenant les liens `Menu`, `Gallery`, `Contact` et le bouton `Reserve`, tout en gardant la navigation horizontale actuelle sur desktop.
 
 - Ajustement du bouton « Reserve » pour qu’il ne s’affiche dans la topbar que sur desktop (`md:inline-flex`) et reste uniquement dans le burger menu sur mobile, afin d’éviter le doublon sur les petits écrans, et simplification de `RestaurantNavbar` en supprimant une fonction `handleNavigate` devenue inutile pour corriger l’erreur TS6133.
+
+- Connexion des deux boutons du hero principal : dans `RestaurantHero`, ajout de `useNavigate` de React Router et d’un `onClick` sur le bouton primaire « View Menu » pour naviguer vers `/menu`, et sur le bouton secondaire « Reserve a Table` pour naviguer vers `/reservations`.
+
+### Métadonnées et titres d’onglets
+
+- Ajout d’un composant dédié `PageMeta` (`src/ui/PageMeta.tsx`) :
+  - Utilise `useEffect` pour définir dynamiquement `document.title`.
+  - Crée ou met à jour les balises `<meta name="description">`, `<meta name="og:title">` et `<meta name="og:description">` selon la page.
+- Intégration de `PageMeta` dans chaque page principale pour gérer les titres d’onglet et les métadonnées :
+  - `RestaurantHomePage` : titre « L'Essence – Restaurant gastronomique à Paris » et description orientée accueil/expérience globale.
+  - `RestaurantMenuPage` : titre « Menu – L'Essence » et description centrée sur les créations de saison.
+  - `WineCellarPage` : titre « Wine Cellar – L'Essence » et description centrée sur la cave et les cuvées.
+  - `GalleryPage` : titre « Galerie – L'Essence » avec description sur l’univers visuel du restaurant.
+  - `ContactPage` : titre « Contact – L'Essence » pour toutes les demandes/réservations/privatisations.
+  - `PrivateTastingPage` : titre « Dégustation Privée – L'Essence » pour la page de tasting privé.
+  - `ReservationsPage` : titre « Réservations – L'Essence » pour la page de réservation.
+  - `PrivacyPolicyPage` : titre « Politique de confidentialité – L'Essence ».
+  - `TermsOfServicePage` : titre « Conditions générales d'utilisation – L'Essence ».
+  - `StoryPage` : titre « Notre histoire – L'Essence ».
+- Mise à jour de `index.html` :
+  - Remplacement du titre générique `template1` par « L'Essence – Restaurant gastronomique à Paris ».
+  - Ajout d’une balise `<meta name="description">` par défaut pour le chargement initial de l’application.

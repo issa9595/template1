@@ -129,6 +129,7 @@ export const restaurantHomeViewModel: RestaurantHomeViewModel = {
       links: [
         { label: "Home", href: "/" },
         { label: "Menu", href: "/menu" },
+        { label: "Story", href: "/story" },
         { label: "Wine List", href: "/wine" },
         { label: "Gallery", href: "/gallery" },
         { label: "Reservations", href: "/reservations" },
@@ -171,6 +172,6 @@ export const restaurantHomeViewModel: RestaurantHomeViewModel = {
       },
     ],
   },
-  copyright: "© 2024 L'Essence Restaurant Group. All rights reserved.",
+  copyright: "© 2026 L'Essence Restaurant Group. All rights reserved.",
 };
 

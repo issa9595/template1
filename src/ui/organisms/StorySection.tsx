@@ -36,7 +36,7 @@ export function StorySection({ story, imageUrl, imageAlt }: StorySectionProps) {
           </p>
           <div className="pt-4">
             <a
-              href="#"
+              href="/story"
               className="group inline-flex items-center gap-2 text-primary font-bold transition-all hover:gap-4"
             >
               {story.linkLabel}

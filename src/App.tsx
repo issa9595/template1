@@ -8,6 +8,7 @@ import { PrivateTastingPage } from "./ui/pages/PrivateTastingPage";
 import { ReservationsPage } from "./ui/pages/ReservationsPage";
 import { PrivacyPolicyPage } from "./ui/pages/PrivacyPolicyPage";
 import { TermsOfServicePage } from "./ui/pages/TermsOfServicePage";
+import { StoryPage } from "./ui/pages/StoryPage";
 import { ScrollToTop } from "./ui/ScrollToTop";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<RestaurantHomePage />} />
           <Route path="/menu" element={<RestaurantMenuPage />} />
+          <Route path="/story" element={<StoryPage />} />
           <Route path="/wine" element={<WineCellarPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/contact" element={<ContactPage />} />
