@@ -114,3 +114,5 @@
 - Résolution d’un blocage GitHub Push Protection lié à la présence d’un token Google OAuth dans `.env` : conseils pour ajouter `.env` au `.gitignore`, retirer le secret du fichier, regénérer le token côté Google et recréer un dépôt Git propre (réinitialisation de `.git`) avant de pousser à nouveau sans secrets.
 
 - Explication sur l’ajout d’un tab icon (favicon) dans la page `index.html` via une balise `<link rel="icon" ...>` pointant vers une image placée dans le dossier `public` ou à la racine, et correction du chemin pour Vite en utilisant `href="/favicon.ico"` (et non `"/public/favicon.ico"`).
+
+- Diagnostic du 404 en production sur Vercel lors du rafraîchissement d’une page React Router : ajout recommandé d’un fichier `vercel.json` à la racine avec une règle de réécriture globale vers `index.html` pour toutes les routes (`/(.*)` → `/index.html`) afin que le routing soit géré côté client.
