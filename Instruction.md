@@ -116,3 +116,7 @@
 - Explication sur l’ajout d’un tab icon (favicon) dans la page `index.html` via une balise `<link rel="icon" ...>` pointant vers une image placée dans le dossier `public` ou à la racine, et correction du chemin pour Vite en utilisant `href="/favicon.ico"` (et non `"/public/favicon.ico"`).
 
 - Diagnostic du 404 en production sur Vercel lors du rafraîchissement d’une page React Router : ajout recommandé d’un fichier `vercel.json` à la racine avec une règle de réécriture globale vers `index.html` pour toutes les routes (`/(.*)` → `/index.html`) afin que le routing soit géré côté client.
+
+- Transformation de `RestaurantNavbar` en topbar responsive avec burger menu sur mobile : ajout d’un état `isOpen`, d’un bouton icône (menu/close) visible en `md:hidden`, et d’un panneau de navigation mobile contenant les liens `Menu`, `Gallery`, `Contact` et le bouton `Reserve`, tout en gardant la navigation horizontale actuelle sur desktop.
+
+- Ajustement du bouton « Reserve » pour qu’il ne s’affiche dans la topbar que sur desktop (`md:inline-flex`) et reste uniquement dans le burger menu sur mobile, afin d’éviter le doublon sur les petits écrans.
